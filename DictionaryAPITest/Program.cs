@@ -39,8 +39,8 @@ namespace DictionaryAPITest
                                         {                                            
                                             if (sense.definitions != null && sense.definitions.Length > 0 && sense.definitions[0] != null)
                                             {
-                                                definitions.Add(sense.definitions[0]);
-                                                Console.WriteLine(sense.definitions[0]);
+                                                definitions.Add("(" + lexicalEntry.lexicalCategory + ") " + sense.definitions[0]);
+                                                Console.WriteLine(definitions[definitions.Count - 1]);
                                                 Console.WriteLine("");
                                             }
                                             if (sense.subsenses != null)
@@ -49,8 +49,8 @@ namespace DictionaryAPITest
                                                 {
                                                     if (subsense.definitions != null && subsense.definitions.Length > 0 && subsense.definitions[0] != null)
                                                     {
-                                                        definitions.Add(subsense.definitions[0]);
-                                                        Console.WriteLine(subsense.definitions[0]);
+                                                        definitions.Add("(" + lexicalEntry.lexicalCategory + ") " + subsense.definitions[0]);
+                                                        Console.WriteLine(definitions[definitions.Count - 1]);
                                                         Console.WriteLine("");
                                                     }
                                                 }
